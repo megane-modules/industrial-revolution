@@ -1,0 +1,58 @@
+repositories {
+    maven {
+        url "https://maven.jamieswhiteshirt.com/libs-release"
+        content {
+            includeGroup "com.jamieswhiteshirt"
+        }
+    }
+
+    maven {
+        url "https://maven.blamejared.com"
+        content {
+            includeGroup "vazkii.patchouli"
+        }
+    }
+
+    maven {
+        url "https://mod-buildcraft.com/maven"
+        content {
+            includeGroup "alexiil.mc.lib"
+        }
+    }
+
+    maven {
+        url "https://jitpack.io"
+        content {
+            includeGroup "com.github.Draylar"
+            includeGroup "com.github.Draylar.omega-config"
+            includeGroup "com.github.emilyploszaj"
+        }
+    }
+
+    maven {
+        url "https://maven.cafeteria.dev"
+        content {
+            includeGroup "dev.cafeteria"
+        }
+    }
+}
+
+dependencies {
+    modImplementation "lol.bai.megane:megane-api:7.0.0"
+    modRuntimeOnly "lol.bai.megane:megane-runtime:7.0.0"
+
+    modImplementation "curse.maven:industrial-revolution-391708:3599880"
+
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.45.0+1.18"
+    modImplementation "net.fabricmc:fabric-language-kotlin:1.7.0+kotlin.1.6.0"
+
+    modImplementation "teamreborn:energy:2.0.0-beta1"
+    modImplementation "io.github.cottonmc:LibGui:5.0.0+1.18"
+    modImplementation "vazkii.patchouli:Patchouli:1.18-60-FABRIC"
+    modImplementation "alexiil.mc.lib:libblockattributes-core:0.10.0"
+    modImplementation "alexiil.mc.lib:libblockattributes-fluids:0.10.0"
+    modImplementation "alexiil.mc.lib:libblockattributes-items:0.10.0"
+    modImplementation "com.github.Draylar:magna:1.7.0-1.18"
+    modImplementation "com.github.emilyploszaj:step-height-entity-attribute:v1.0.1"
+    modImplementation "dev.cafeteria:fake-player-api:0.3.0"
+}
