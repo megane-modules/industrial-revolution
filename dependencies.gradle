@@ -38,8 +38,11 @@ repositories {
 }
 
 dependencies {
-    modImplementation "lol.bai.megane:megane-api:7.0.0"
-    modRuntimeOnly "lol.bai.megane:megane-runtime:7.0.0"
+    modImplementation meganeModule("api:7.0.0")
+    modRuntimeOnly meganeModule("runtime:7.0.0")
+    modRuntimeOnly meganeModule("reborn-energy:7.0.0")
+    modRuntimeOnly meganeModule("fabric-transfer:7.0.0")
+    modRuntimeOnly meganeModule("lib-block-attributes:7.0.0")
 
     modImplementation "curse.maven:industrial-revolution-391708:3599880"
 
