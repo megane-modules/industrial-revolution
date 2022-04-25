@@ -14,10 +14,8 @@ public class BaseMachineItemProvider extends ItemProvider<BaseMachineBlockEntity
     private SidedInventory inventory;
 
     @Override
-    public void setContext(World world, BlockPos pos, PlayerEntity player, BaseMachineBlockEntity baseMachineBlockEntity) {
-        super.setContext(world, pos, player, baseMachineBlockEntity);
-
-        this.inventory = baseMachineBlockEntity.getInventory(world.getBlockState(pos), world, pos);
+    protected void init() {
+        this.inventory = getObject().getInventory(getWorld().getBlockState(getPos()), getWorld(), getPos());
     }
 
     @Override

@@ -4,6 +4,7 @@ import java.util.Objects;
 
 import lol.bai.megane.api.provider.ProgressProvider;
 import me.steven.indrev.blockentities.MachineBlockEntity;
+import me.steven.indrev.components.InventoryComponent;
 import me.steven.indrev.inventories.IRInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -17,10 +18,14 @@ public abstract class AbstractMachineProgressProvider<T extends MachineBlockEnti
     private IRInventory inventory;
 
     @Override
-    public void setContext(World world, BlockPos pos, PlayerEntity player, T t) {
-        super.setContext(world, pos, player, t);
+    protected void init() {
+        InventoryComponent component = getObject().getInventoryComponent();
+        this.inventory = component == null ? null : component.getInventory();
+    }
 
-        this.inventory = Objects.requireNonNull(t.getInventoryComponent()).getInventory();
+    @Override
+    public boolean hasProgress() {
+        return inventory != null;
     }
 
     @Override

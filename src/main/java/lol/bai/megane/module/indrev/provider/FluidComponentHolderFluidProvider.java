@@ -22,10 +22,8 @@ public class FluidComponentHolderFluidProvider<T> extends FluidProvider<T> {
     }
 
     @Override
-    public void setContext(World world, BlockPos pos, PlayerEntity player, T t) {
-        super.setContext(world, pos, player, t);
-
-        this.fluidComponent = fluidComponentGetter.apply(t);
+    protected void init() {
+        this.fluidComponent = fluidComponentGetter.apply(getObject());
     }
 
     @Override

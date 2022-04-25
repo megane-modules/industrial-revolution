@@ -16,6 +16,7 @@ import me.steven.indrev.blockentities.modularworkbench.ModularWorkbenchBlockEnti
 import me.steven.indrev.blockentities.storage.TankBlockEntity;
 import me.steven.indrev.fluids.BaseFluid;
 
+@SuppressWarnings("unused")
 public class MeganeIndustrialRevolution implements MeganeModule {
 
     @Override

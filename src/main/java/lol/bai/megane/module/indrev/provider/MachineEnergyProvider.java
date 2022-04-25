@@ -14,10 +14,8 @@ public class MachineEnergyProvider extends EnergyProvider<MachineBlockEntity> {
     private IREnergyStorage energyStorage;
 
     @Override
-    public void setContext(World world, BlockPos pos, PlayerEntity player, MachineBlockEntity machineBlockEntity) {
-        super.setContext(world, pos, player, machineBlockEntity);
-
-        this.energyStorage = machineBlockEntity.getStorage();
+    protected void init() {
+        this.energyStorage = getObject().getStorage();
     }
 
     @Override
